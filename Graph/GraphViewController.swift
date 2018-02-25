@@ -18,14 +18,14 @@ class GraphViewController: UIViewController {
     @IBAction func drow(_ sender: UIButton) {
         guard let input = formulaTextField.text, formulaTextField.text != "" else
         {
-            showAlert(message: "enter func")
+            showAlert(message: "Enter the function")
             return
         }
         if isValidFunc(funcString: input) {
             let inputFunc = parseInfix(e: prepareForFunc(string: input))
             graphView.rpnString = inputFunc
         } else {
-            showAlert(message: "Incorrect simbols")
+            showAlert(message: "Incorrect symbols")
         }
     }
     
