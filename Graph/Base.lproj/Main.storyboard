@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Graph View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GraphViewController" customModule="Graph" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="sR4-QO-PJD" customClass="GraphView" customModule="Graph" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(x-2)*3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVe-di-DNv">
+                                        <rect key="frame" x="100" y="20" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="175" id="khu-7o-Tnm"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxl-AC-dAw">
+                                        <rect key="frame" x="295" y="20" width="72" height="30"/>
+                                        <state key="normal" title="drow"/>
+                                        <connections>
+                                            <action selector="drow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IsF-ej-QnB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nxl-AC-dAw" firstAttribute="leading" secondItem="eVe-di-DNv" secondAttribute="trailing" constant="20" id="9iV-eh-Pbe"/>
+                                    <constraint firstItem="nxl-AC-dAw" firstAttribute="centerY" secondItem="eVe-di-DNv" secondAttribute="centerY" id="BQ9-SN-SUe"/>
+                                    <constraint firstItem="eVe-di-DNv" firstAttribute="top" secondItem="sR4-QO-PJD" secondAttribute="top" constant="20" id="Lia-yF-cFD"/>
+                                    <constraint firstAttribute="trailing" secondItem="nxl-AC-dAw" secondAttribute="trailing" constant="8" id="NJ9-zb-ZSf"/>
+                                    <constraint firstItem="eVe-di-DNv" firstAttribute="centerX" secondItem="sR4-QO-PJD" secondAttribute="centerX" id="Wt0-6X-uHp"/>
+                                    <constraint firstItem="nxl-AC-dAw" firstAttribute="height" secondItem="eVe-di-DNv" secondAttribute="height" id="dcF-gA-y31"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scale">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.20797676109999999" green="0.41154236379999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorAxes">
+                                        <color key="value" red="1" green="0.066453215309999994" blue="0.043020366579999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sR4-QO-PJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7UE-54-q3C"/>
+                            <constraint firstItem="sR4-QO-PJD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9wj-XV-8dA"/>
+                            <constraint firstItem="sR4-QO-PJD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Imz-fd-M8C"/>
+                            <constraint firstAttribute="trailing" secondItem="sR4-QO-PJD" secondAttribute="trailing" id="ryM-aD-8n4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="formulaTextField" destination="eVe-di-DNv" id="yrY-eu-f10"/>
+                        <outlet property="graphView" destination="sR4-QO-PJD" id="gMR-hV-DXM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

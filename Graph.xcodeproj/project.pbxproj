@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		A5992BBC20403AAF00A60EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5992BBB20403AAF00A60EDF /* AppDelegate.swift */; };
-		A5992BBE20403AAF00A60EDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5992BBD20403AAF00A60EDF /* ViewController.swift */; };
+		A5992BBE20403AAF00A60EDF /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5992BBD20403AAF00A60EDF /* GraphViewController.swift */; };
 		A5992BC120403AAF00A60EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5992BBF20403AAF00A60EDF /* Main.storyboard */; };
 		A5992BC320403AAF00A60EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5992BC220403AAF00A60EDF /* Assets.xcassets */; };
 		A5992BC620403AAF00A60EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5992BC420403AAF00A60EDF /* LaunchScreen.storyboard */; };
+		A5992BCE2040ADB800A60EDF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5992BCD2040ADB800A60EDF /* GraphView.swift */; };
+		A5992BD02040B06C00A60EDF /* AxesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5992BCF2040B06C00A60EDF /* AxesDrawer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5992BB820403AAF00A60EDF /* Graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5992BBB20403AAF00A60EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5992BBD20403AAF00A60EDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5992BBD20403AAF00A60EDF /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		A5992BC020403AAF00A60EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5992BC220403AAF00A60EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5992BC520403AAF00A60EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5992BC720403AAF00A60EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5992BCD2040ADB800A60EDF /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		A5992BCF2040B06C00A60EDF /* AxesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesDrawer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				A5992BBB20403AAF00A60EDF /* AppDelegate.swift */,
-				A5992BBD20403AAF00A60EDF /* ViewController.swift */,
+				A5992BCF2040B06C00A60EDF /* AxesDrawer.swift */,
+				A5992BCD2040ADB800A60EDF /* GraphView.swift */,
+				A5992BBD20403AAF00A60EDF /* GraphViewController.swift */,
 				A5992BBF20403AAF00A60EDF /* Main.storyboard */,
 				A5992BC220403AAF00A60EDF /* Assets.xcassets */,
 				A5992BC420403AAF00A60EDF /* LaunchScreen.storyboard */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5992BBE20403AAF00A60EDF /* ViewController.swift in Sources */,
+				A5992BBE20403AAF00A60EDF /* GraphViewController.swift in Sources */,
+				A5992BD02040B06C00A60EDF /* AxesDrawer.swift in Sources */,
 				A5992BBC20403AAF00A60EDF /* AppDelegate.swift in Sources */,
+				A5992BCE2040ADB800A60EDF /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
