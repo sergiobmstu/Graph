@@ -14,13 +14,13 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var formulaTextField: UITextField!
     @IBOutlet weak var graphView: GraphView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     
     @IBAction func drow(_ sender: UIButton) {
-        guard let input = formulaTextField.text, formulaTextField.text != "" else {showAlert(message: "enter func"); return}
+        guard let input = formulaTextField.text, formulaTextField.text != "" else
+        {
+            showAlert(message: "enter func")
+            return
+        }
         if isValidFunc(funcString: input) {
             let inputFunc = parseInfix(e: prepareForFunc(string: input))
             graphView.rpnString = inputFunc
@@ -31,11 +31,10 @@ class GraphViewController: UIViewController {
     
     func showAlert(message : String) {
         let alert = UIAlertController.init(title: "Error", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction.init(title: "Ok", style: .default, handler: nil)
+        let alertAction = UIAlertAction.init(title: "Ok", style: .default)
         alert.addAction(alertAction)
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true)
     }
-    
     
     func isValidFunc(funcString: String) -> Bool {
         var returnValue = true
@@ -52,7 +51,7 @@ class GraphViewController: UIViewController {
             print("invalid regex: \(error.localizedDescription)")
             returnValue = false
         }
-        return  returnValue
+        return returnValue
     }
     
     func prepareForFunc (string : String) -> String {
@@ -68,7 +67,6 @@ class GraphViewController: UIViewController {
         }
         return str2
     }
-    
     
     let opa = [
         "*": (prec: 3, rAssoc: false),
