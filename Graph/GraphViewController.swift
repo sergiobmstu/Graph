@@ -16,6 +16,7 @@ class GraphViewController: UIViewController {
     
     
     @IBAction func drow(_ sender: UIButton) {
+        view.endEditing(true)
         guard let input = formulaTextField.text, formulaTextField.text != "" else
         {
             showAlert(message: "Enter the function")
@@ -95,7 +96,7 @@ class GraphViewController: UIViewController {
                 if let o1 = opa[tok] {
                     for op in stack.reversed() {
                         if let o2 = opa[op] {
-                            if !(o1.prec > o2.prec || (o1.prec == o2.prec)) {
+                            if !(o1.prec > o2.prec || (o1.prec == o2.prec /*&& o1.rAssoc*/)) {
                                 
                                 rpn += [stack.removeLast()]
                                 continue
