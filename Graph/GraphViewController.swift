@@ -96,7 +96,7 @@ class GraphViewController: UIViewController {
                 if let o1 = opa[tok] {
                     for op in stack.reversed() {
                         if let o2 = opa[op] {
-                            if !(o1.prec > o2.prec || (o1.prec == o2.prec /*&& o1.rAssoc*/)) {
+                            if !(o1.prec > o2.prec || (o1.prec == o2.prec && o1.rAssoc)) {
                                 
                                 rpn += [stack.removeLast()]
                                 continue
